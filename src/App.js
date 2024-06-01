@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:"flex", 
+    flexDirection:"column", 
+    backgroundColor:"black",
+    height:"100vh",
+    color:"white",
+    fontSize:"80px",
+    fontFamily:"monospace",
+    alignItems:"center",
+    justifyContent:"center"
+    }}>
+      <motion.div
+        initial={{x:-500, backgroundColor:"#FFFF00"}}
+        animate={{x:0, backgroundColor:"#000000"}}
+        transition={{duration:1, ease:"linear"}}
+      >WEB DESIGN AGENCY</motion.div>
+      <motion.div
+        initial={{y:-500, backgroundColor:"#0000FF"}}
+        animate={{y:0, backgroundColor:"#000000"}}
+        transition={{duration:1, ease:"linear"}}
+      >We Build Web Applications</motion.div>  
     </div>
   );
 }
